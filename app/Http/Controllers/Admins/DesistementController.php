@@ -54,7 +54,7 @@ class DesistementController extends Controller
         $desistement->numero = $request->numero;
         $desistement->cause = $request->cause;
         $desistement->save();
-        return redirect(route('admins.desistements.index'))->with('succes' , 'avocat créé avec succès');
+        return redirect(route('admins.desistements.index'))->with('succes' , 'Abrakada !!!!');
     }
 
     /**
@@ -100,7 +100,7 @@ class DesistementController extends Controller
         $desistement->numero = $request->numero;
         $desistement->cause = $request->cause;
         $desistement->save();
-        return redirect(route('admins.desistements.index'))->with('succes' , 'avocat créé avec succès');
+        return redirect(route('admins.desistements.index'))->with('succes' , 'Abrakada !!!!');
     
     }
 

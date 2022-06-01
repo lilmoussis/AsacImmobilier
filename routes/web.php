@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admins/login');
 });
 Route::get('admins', [App\Http\Controllers\Admins\MainController::class,'login'])->name('admins.login');
 Route::post('admins', [App\Http\Controllers\Admins\MainController::class,'loginform'])->name('admins.loginform');
@@ -37,6 +37,8 @@ Route::get('admins/avocats/index', [App\Http\Controllers\Admins\AvocatController
 Route::get('admins/avocats/create', [App\Http\Controllers\Admins\AvocatController::class,'create'])->name('admins.avocats.create');
 Route::post('admins/avocats/store', [App\Http\Controllers\Admins\AvocatController::class,'store'])->name('admins.avocats.store');
 Route::get('admins/avocats/{id}/destroy', [App\Http\Controllers\Admins\AvocatController::class,'destroy'])->name('admins.avocats.destroy');
+Route::get('admins/avocats/{id}/edit', [App\Http\Controllers\Admins\AvocatController::class,'edit'])->name('admins.avocats.edit');
+Route::post('admins/avocats/{id}/update', [App\Http\Controllers\Admins\AvocatController::class,'update'])->name('admins.avocats.update');
 
         // Routes de Appartement
 

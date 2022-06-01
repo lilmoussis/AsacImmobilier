@@ -3,19 +3,17 @@
 @section('login')
     {{-- {{@bcrypt('admin')}}
     
-    @if($message=Session::get('error'))
-        <div class="">{{$message}}</div>
-    @endif
+    
     <form action="{{ route('admins.loginform')}}" method="post">
         @csrf
-        <input type="text" required name="username" id="" placeholder="Nom d'Utilisateur"><br>
-        <input type="password" required name="password" id="" placeholder="Mot de passe"><br>
-        <button type="submit">
+        <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="text" required name="username"  placeholder="Nom d'Utilisateur"><br>
+        <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="password" required name="password"  placeholder="Mot de passe"><br>
+        <button   type="submit" style="width:100px; margin-left:200px"  class="btn btn-primary btn-block">
             Se connecter
         </button>
     </form> --}}
 
-    <div class="authincation h-100">
+    <div class="authincation h-100" style="margin-top: 150px">
         <div class="container h-100">
             <div class="row justify-content-center h-100 align-items-center">
                 <div class="col-md-6">
@@ -23,37 +21,24 @@
                         <div class="row no-gutters">
                             <div class="col-xl-12">
                                 <div class="auth-form">
-									<div class="text-center mb-3">
-										<img src="images/logo-full.png" alt="">
-									</div>
-                                    <h4 class="text-center mb-4">Sign in your account</h4>
-                                    <form action="{{ route('admins.loginform')}}">
+                                    <h4 class="text-center mb-4">Connectez-vous</h4>
+                                    @if($message=Session::get('error'))
+                                        <div>{{$message}}</div>
+                                    @endif
+                                    <form action="{{route('admins.loginform')}}" method="post">
+                                        @csrf
                                         <div class="form-group">
-                                            <label class="mb-1"><strong>Utilisateur</strong></label>
-                                            <input type="username" class="form-control" value=">
+                                            <label class="mb-1"><strong>Nom d'utilisateur</strong></label>
+                                            <input style="border-color: rgb(224, 152, 17)" name="username" type="text" class="form-control" required>
                                         </div>
                                         <div class="form-group">
-                                            <label class="mb-1"><strong>Password</strong></label>
-                                            <input type="password" class="form-control" value="Password">
-                                        </div>
-                                        <div class="form-row d-flex justify-content-between mt-4 mb-2">
-                                            <div class="form-group">
-                                               <div class="custom-control custom-checkbox ml-1">
-													<input type="checkbox" class="custom-control-input" id="basic_checkbox_1">
-													<label class="custom-control-label" for="basic_checkbox_1">Remember my preference</label>
-												</div>
-                                            </div>
-                                            <div class="form-group">
-                                                <a href="page-forgot-password.html">Forgot Password?</a>
-                                            </div>
+                                            <label class="mb-1"><strong>Mot de passe</strong></label>
+                                            <input style="border-color: rgb(224, 152, 17)" type="password" name="password" class="form-control" required>
                                         </div>
                                         <div class="text-center">
-                                            <button type="submit" class="btn btn-primary btn-block">Sign Me In</button>
+                                            <button type="submit"  class="btn btn-primary btn-block">Valider</button>
                                         </div>
                                     </form>
-                                    <div class="new-account mt-3">
-                                        <p>Don't have an account? <a class="text-primary" href="page-register.html">Sign up</a></p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -61,5 +46,7 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
     </div>
 @endsection

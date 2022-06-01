@@ -8,10 +8,12 @@
         <div>{{$message}}</div>
     @endif
     <br>
-    <form action="{{route('admins.immeubles.store')}}" method="post">
+    <form  action="{{route('admins.immeubles.store')}}" method="post">
         @csrf
-        <input type="text" name="nom" placeholder="Nom" required><br>
-        <input type="text" name="adresse" placeholder="adresse" required><br>
-        <button type="submit">Enregistrer</button>
+        <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="text" name="nom" placeholder="Nom" required><br>
+        <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="text" name="adresse" placeholder="adresse" required><br>
+        <button   type="submit" style="width:100px; margin-left:200px" class="btn btn-primary btn-block">Enregistrer</button>
     </form>
+</div>
+    </div>
 @endsection

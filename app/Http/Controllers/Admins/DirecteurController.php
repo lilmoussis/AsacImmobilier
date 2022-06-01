@@ -55,7 +55,7 @@ class DirecteurController extends Controller
         $directeur->cni = $request->cni;
         $directeur->signature = $request->signature;
         $directeur->save();
-        return redirect(route('admins.directeurs.index'))->with('succes' , 'Directeur créé avec succès');
+        return redirect(route('admins.directeurs.index'))->with('succes' , 'Abrakada !!!!');
     }
 
     /**
@@ -80,7 +80,7 @@ class DirecteurController extends Controller
         if (!session()->has('admin_id')) {
             return redirect(route('admins.login')); 
         }
-        return view('admins.directeur.edit', [
+        return view('admins.directeurs.edit', [
             'directeur' => Directeur::find($id),
             'id' => $id
         ]);
@@ -105,7 +105,7 @@ class DirecteurController extends Controller
         $directeur->cni = $request->cni;
         $directeur->signature = $request->signature;
         $directeur->save();
-        return redirect(route('admins.directeurs.index'))->with('succes' , 'Directeur créé avec succès');
+        return redirect(route('admins.directeurs.index'))->with('succes' , 'Abrakada !!!!');
     
     }
 

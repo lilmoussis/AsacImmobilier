@@ -90,6 +90,10 @@
   --font-family-base: Roboto, sans-serif;
   --font-family-title: Roboto, sans-serif; }
 
+  th{
+    font-weight: bold;
+    color: black !important;
+  }
 .gradient_one {
   background-image: linear-gradient(to right, rgba(186, 1, 181, 0.85) 0%, rgba(103, 25, 255, 0.85) 100%); }
 
@@ -12440,7 +12444,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
 .deznav {
   width: 17.5rem;
   padding-bottom: 0;
-  height: calc(100% - 72px);
+  height: calc(100vh - 72px);
   position: absolute;
   top: 4.5rem;
   padding-top: 0;

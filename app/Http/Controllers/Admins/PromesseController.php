@@ -63,7 +63,7 @@ class PromesseController extends Controller
         $promesse->avance = $request->avance;
         $promesse->etat = $request->etat;
         $promesse->save();
-        return redirect(route('admins.promesses.index'))->with('succes' , 'Promesse créé avec succès');
+        return redirect(route('admins.promesses.index'))->with('succes' , 'Abrakada !!!!');
     }
 
     /**
@@ -114,7 +114,7 @@ class PromesseController extends Controller
         $promesse->avance = $request->avance;
         $promesse->etat = $request->etat;
         $promesse->save();
-        return redirect(route('admins.promesses.index'))->with('succes' , 'Promesse créé avec succès');
+        return redirect(route('admins.promesses.index'))->with('succes' , 'Abrakada !!!!');
     
     }
 

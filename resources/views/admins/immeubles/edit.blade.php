@@ -10,8 +10,10 @@
     <br>
     <form action="{{route('admins.immeubles.update',$id)}}" method="post">
         @csrf
-        <input type="text" name="nom" placeholder="Nom" value="{{$immeubles->$nom}}" required><br>
-        <input type="text" name="adresse" placeholder="adresse" value="{{$immeubles->$adresse}}" required><br>
-        <button type="submit">Enregistrer</button>
+        <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="text" name="nom" placeholder="Nom" value="{{$immeubles->$nom}}" required><br>
+        <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="text" name="adresse" placeholder="adresse" value="{{$immeubles->$adresse}}" required><br>
+        <button   type="submit" style="width:100px; margin-left:200px"  class="btn btn-primary btn-block">Enregistrer</button>
     </form>
+</div>
+    </div>
 @endsection

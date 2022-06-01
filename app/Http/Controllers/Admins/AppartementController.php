@@ -58,7 +58,7 @@ class AppartementController extends Controller
         $appartement->prix = $request->prix;
         $appartement->etat = $request->etat;
         $appartement->save();
-        return redirect(route('admins.appartements.index'))->with('succes' , 'avocat créé avec succès');
+        return redirect(route('admins.appartements.index'))->with('succes' , 'Abrakada !!!!');
     }
 
     /**
@@ -108,7 +108,7 @@ class AppartementController extends Controller
         $appartement->prix = $request->prix;
         $appartement->etat = $request->etat;
         $appartement->save();
-        return redirect(route('admins.appartements.index'))->with('succes' , 'avocat créé avec succès');
+        return redirect(route('admins.appartements.index'))->with('succes' , 'Abrakada !!!!');
     }
 
     /**

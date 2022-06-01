@@ -10,15 +10,16 @@
     <br>
     <form action="{{route('admins.desistements.store')}}" method="post">
         @csrf
-        {{-- <select name="immeubleid" id="">
-            @foreach ($immeubles as $immeuble)
-                <option value="{{$immeuble->id}}">{{$immeuble->nom}}</option>
+        <select class="form-control w-50" name="immeubleid" id="">
+            @foreach ($promesses as $promesse)
+                <option value="{{$promesse->id}}">{{$promesse->appartementid}}</option>
             @endforeach
-        </select> --}}
+        </select>
         <br>
-        <input type="button" value="Numero" onclick="form.alea.value=parseInt(Math.random()*100);">
-Nombre généré : <input type="text" name="numero" size=10>
-        <input type="text" name="cause" placeholder="Cause" required><br>
-        <button type="submit">Enregistrer</button>
+        <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="number" name="numero" placeholder="numero" required><br>
+        <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="text" name="cause" placeholder="Cause" required><br>
+        <button   type="submit" style="width:100px; margin-left:200px"  class="btn btn-primary btn-block">Enregistrer</button>
     </form>
+</div>
+    </div>
 @endsection

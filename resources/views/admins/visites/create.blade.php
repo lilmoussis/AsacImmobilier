@@ -10,18 +10,20 @@
     <br>
     <form action="{{route('admins.visites.store')}}" method="post">
         @csrf
-        <select name="clientid" id="">
+        <select class="form-control w-50" name="clientid" >
             @foreach ($clients as $client)
                 <option value="{{$client->id}}">{{$client->nom . " " . $client->prenom1 . " " . $client->prenom2}}</option>
             @endforeach
         </select><br>
-        <select name="appartementid" id="">
+        <select class="form-control w-50" name="appartementid" >
             @foreach ($appartements as $appartement)
                 <option value="{{$appartement->id}}">{{$appartement->numappart}}</option>
             @endforeach
         </select><br>
-        <input type="text" name="remarque" placeholder="remarque" required><br>
-        <input type="text" name="decision" placeholder="decision" required><br>
-        <button type="submit">Enregistrer</button>
+        <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="text" name="remarque" placeholder="remarque" required><br>
+        <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="text" name="decision" placeholder="decision" required><br>
+        <button   type="submit" style="width:100px; margin-left:200px"  class="btn btn-primary btn-block">Enregistrer</button>
     </form>
+</div>
+    </div>
 @endsection

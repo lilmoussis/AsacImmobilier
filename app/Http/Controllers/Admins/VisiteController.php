@@ -56,7 +56,7 @@ class VisiteController extends Controller
         $visite->remarque = $request->remarque;
         $visite->decision = $request->decision;
         $visite->save();
-        return redirect(route('admins.visites.index'))->with('succes' , 'Visite créé avec succès');
+        return redirect(route('admins.visites.index'))->with('succes' , 'Abrakada !!!!');
     }
 
     /**
@@ -103,7 +103,7 @@ class VisiteController extends Controller
         $visite->remarque = $request->remarque;
         $visite->decision = $request->decision;
         $visite->save();
-        return redirect(route('admins.visites.index'))->with('succes' , 'Visite créé avec succès');
+        return redirect(route('admins.visites.index'))->with('succes' , 'Abrakada !!!!');
     
     }
 

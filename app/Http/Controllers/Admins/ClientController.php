@@ -56,7 +56,7 @@ class ClientController extends Controller
         $client->profession = $request->profession;
         $client->signature = $request->signature;
         $client->save();
-        return redirect(route('admins.clients.index'))->with('succes' , 'Client créé avec succès');
+        return redirect(route('admins.clients.index'))->with('succes' , 'Abrakada !!!!');
     }
 
     /**
@@ -107,7 +107,7 @@ class ClientController extends Controller
         $client->profession = $request->profession;
         $client->signature = $request->signature;
         $client->save();
-        return redirect(route('admins.clients.index'))->with('succes' , 'Client modifié avec succès');
+        return redirect(route('admins.clients.index'))->with('succes' , 'Abrakada !!!!');
     }
 
     /**

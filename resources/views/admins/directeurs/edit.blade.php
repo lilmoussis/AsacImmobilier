@@ -10,12 +10,14 @@
     <br>
     <form action="{{route('admins.directeurs.update',$id)}}" method="post">
         @csrf
-        <input type="text" name="nom" placeholder="Nom" value="{{$directeurs->nom}}" required><br>
-        <input type="text" name="prenom" value="{{$directeurs->prenom}}" placeholder="Prenom" required><br>
-        <input type="text" name="adresse" value="{{$directeurs->adresse}}" placeholder="Adresse" required><br>
-        <input type="text" name="telephone" value="{{$directeurs->telephone}}" placeholder="telephone" required><br>
-        <input type="text" name="cni" placeholder="cni" value="{{$directeurs->cni}}" required><br>
-        <input type="text" name="signature" value="{{$directeurs->signature}}" placeholder="signature"><br>
-        <button type="submit">Enregistrer</button>
+        <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="text" name="nom" placeholder="Nom" value="{{$directeur->nom}}" required><br>
+        <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="text" name="prenom" value="{{$directeur->prenom}}" placeholder="Prenom" required><br>
+        <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="text" name="adresse" value="{{$directeur->adresse}}" placeholder="Adresse" required><br>
+        <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="text" name="telephone" value="{{$directeur->telephone}}" placeholder="telephone" required><br>
+        <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="text" name="cni" placeholder="cni" value="{{$directeur->cni}}" required><br>
+        <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="text" name="signature" value="{{$directeur->signature}}" placeholder="signature"><br>
+        <button   type="submit" style="width:100px; margin-left:200px"  class="btn btn-primary btn-block">Enregistrer</button>
     </form>
+</div>
+    </div>
 @endsection

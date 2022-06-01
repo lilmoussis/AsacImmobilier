@@ -50,7 +50,7 @@ class ImmeubleController extends Controller
         $immeuble->nom = $request->nom;
         $immeuble->adresse = $request->adresse;
         $immeuble->save();
-        return redirect(route('admins.immeubles.index'))->with('succes' , 'avocat créé avec succès');
+        return redirect(route('admins.immeubles.index'))->with('succes' , 'Abrakada !!!!');
     }
 
     /**
@@ -95,7 +95,7 @@ class ImmeubleController extends Controller
         $immeuble->nom = $request->nom;
         $immeuble->adresse = $request->adresse;
         $immeuble->save();
-        return redirect(route('admins.immeubles.index'))->with('succes' , 'avocat créé avec succès');
+        return redirect(route('admins.immeubles.index'))->with('succes' , 'Abrakada !!!!');
     
     }
 

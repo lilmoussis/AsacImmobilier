@@ -56,7 +56,7 @@ class AvocatController extends Controller
         $avocat->numautorisation = $request->numautorisation;
         $avocat->signature = $request->signature;
         $avocat->save();
-        return redirect(route('admins.avocats.index'))->with('succes' , 'avocat créé avec succès');
+        return redirect(route('admins.avocats.index'))->with('succes' , 'Abrakada !!!!');
     }
 
     /**
@@ -107,7 +107,7 @@ class AvocatController extends Controller
         $avocat->numautorisation = $request->numautorisation;
         $avocat->signature = $request->signature;
         $avocat->save();
-        return redirect(route('admins.avocats.index'))->with('succes' , 'avocat créé avec succès');
+        return redirect(route('admins.avocats.index'))->with('succes' , 'Abrakada !!!!');
     }
 
     /**
