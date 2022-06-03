@@ -18,6 +18,7 @@
                 <table class="table table-responsive-md">
         <thead>
             <tr>
+                <th>Date_Heure</th>
                 <th>Client</th>
                 <th>Appartemnt</th>
                 <th>Remarque</th>
@@ -28,6 +29,7 @@
          <tbody  class="align-items-center">
             @foreach($visites as $visite)
                 <tr>
+                    <td>{{$visite->created_at}}</td>
                     @php
                         $client=App\Models\Client::find($visite->clientid)
                     @endphp

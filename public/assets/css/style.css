@@ -12444,8 +12444,8 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
 .deznav {
   width: 17.5rem;
   padding-bottom: 0;
-  height: calc(100vh - 72px);
-  position: absolute;
+  /* height: calc(100vh - 72px); */
+  position: fixed;
   top: 4.5rem;
   padding-top: 0;
   z-index: 4;

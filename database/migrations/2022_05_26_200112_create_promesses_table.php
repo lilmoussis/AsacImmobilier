@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('promesses', function (Blueprint $table) {
             $table->id();
             $table->double('prixht');
+            $table->text('numero');
             $table->double('tva');
             $table->double('prixttc')->nullable();
             $table->double('avance');
@@ -34,10 +35,6 @@ return new class extends Migration
                 ->onDelete('cascade');
             $table->foreignId('userid')
                 ->constrained('users')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-            $table->foreignId('visiteid')->nullable()
-                ->constrained('visites')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->timestamps();

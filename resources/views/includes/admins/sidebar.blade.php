@@ -10,11 +10,10 @@
               <a class=" ai-icon" href="{{route('admins.directeurs.index')}}" aria-expanded="false"><span class="nav-text">Directeur</span>
               </a>
           </li>
-          
-          <li><a class=" ai-icon" href="{{route('admins.appartements.index')}}" aria-expanded="false"><span class="nav-text">Appartement</span>
-              </a>
-          </li>
           <li><a class=" ai-icon" href="{{route('admins.immeubles.index')}}" aria-expanded="false"><span class="nav-text">Immeuble</span>
+            </a>
+          </li>
+          <li><a class=" ai-icon" href="{{route('admins.appartements.index')}}" aria-expanded="false"><span class="nav-text">Appartement</span>
               </a>
           </li>
           <li><a class=" ai-icon" href="{{route('admins.clients.index')}}" aria-expanded="false"><span class="nav-text">Client</span>
@@ -24,6 +23,10 @@
               <a class=" ai-icon" href="{{route('admins.avocats.index')}}" aria-expanded="false"><span class="nav-text">Avocats</span>
               </a>
           </li>
+          <li>
+            <a class=" ai-icon" href="{{route('admins.visites.index')}}" aria-expanded="false"><span class="nav-text">Visites</span>
+            </a>
+        </li>
           <li>
               <a class=" ai-icon" href="{{route('admins.promesses.index')}}" aria-expanded="false"><span class="nav-text">Promesse de vente</span>
               </a>

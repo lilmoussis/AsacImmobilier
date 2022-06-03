@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Promesse;
 use App\Models\Avocat;
-use App\Models\Visite;
 use App\Models\Appartement;
 use App\Models\Client;
 
@@ -39,7 +38,9 @@ class PromesseController extends Controller
         }
         return view(
             'admins.promesses.create',[
-                'clients'=>Client::join('visites','clients.id','visites.clientid')->join('appartements','appartements.id','visites.appartementid'), 'avocats'=>Avocat::all()
+                'clients'=>Client::all(),
+                'avocats'=>Avocat::all(),
+                'appartements'=>Appartement::all()
             ]
         );
     }

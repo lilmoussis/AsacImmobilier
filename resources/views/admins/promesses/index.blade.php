@@ -18,6 +18,8 @@
                 <table class="table table-responsive-md">
         <thead>
             <tr>
+                <th>Numéro</th>
+                <th>Date_Heure</th>
                 <th>Avocat</th>
                 <th>Appartement</th>
                 <th>Client</th>
@@ -32,6 +34,8 @@
          <tbody  class="align-items-center">
             @foreach($promesses as $promesse)
                 <tr>
+                    <td>{{$promesse->numero}}</td>
+                    <td>{{$promesse->created_at}}</td>
                     <td>{{$promesse->avocatid}}</td>
                     <td>{{$promesse->appartementid}}</td>
                     <td>{{$promesse->clientid}}</td>

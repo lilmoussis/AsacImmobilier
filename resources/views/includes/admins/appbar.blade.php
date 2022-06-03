@@ -1,7 +1,7 @@
-<div class="header">
+<div class="header" style="position: fixed;">
   <div class="header-content">
       <nav class="navbar navbar-expand">
-          <div class="collapse navbar-collapse justify-content-between" style="margin-left:85%">
+          <div class="collapse navbar-collapse justify-content-between" style="margin-left:820PX">
               <ul class="navbar-nav header-right main-notification">
                   <li class="nav-item dropdown notification_dropdown">
                       <a class="nav-link bell dz-fullscreen" href="#">
@@ -21,3 +21,6 @@
       </nav>
   </div>
 </div>
+<br>
+<br>
+<br>

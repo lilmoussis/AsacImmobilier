@@ -12,20 +12,22 @@
         @csrf
         @foreach ($avocats as $avocat)
         <select class="form-control w-50" name="" >
-            <option value="{{$avocat->id}}">{{$avocat->nom}}</option>
+            <option value="{{$avocat->id}}">{{$avocat->nom . " " . $avocat->prenom}}</option>
         </select>
-        
+        @endforeach
         <br>
         @foreach ($clients as $client)
         <select class="form-control w-50" name="" >
-            <option value="{{$client->id}}">{{$client->numappart}}</option>
+            <option value="{{$client->id}}">{{$client->nom . " " . $client->prenom1 . " " . $client->prenom2}}</option>
         </select>
         <br>
+        @endforeach
+        @foreach ($appartements as $appartement)
         <select class="form-control w-50" name="" >
-            <option value="{{$client->id}}">{{$client->nom}}</option>
+            <option value="{{$appartement->id}}">{{$appartement->numappart}}</option>
         </select>
         @endforeach
-        @endforeach
+        
         <br>
         <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="number" name="prixht" placeholder="prixht" id="prixht" required><br>
         <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="number" id="tva" name="tva" placeholder="tva" required><br>
