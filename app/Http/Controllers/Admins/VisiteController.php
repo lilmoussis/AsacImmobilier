@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Visite;
 use App\Models\Client;
 use App\Models\Appartement;
+use Illuminate\Support\Facades\DB;
 
 class VisiteController extends Controller
 {
@@ -20,9 +21,10 @@ class VisiteController extends Controller
         if (!session()->has('admin_id')) {
             return redirect(route('admins.login')); 
         }
-        return view('admins.visites.index', [
-            'visites' => Visite::orderByDesc('id')->get()
-        ]);
+        $visites=DB::table('visites')->join('clients','visites.clientid','clients.id')->join('appartements','visites.appartementid','appartements.id')->select('clients.nom','clients.prenom1','clients.prenom2','appartements.numappart','appartements.nbrechambre','visites.*')->get();
+       
+        return view('admins.visites.index', compact('visites')
+        );
     }
 
     /**
@@ -35,10 +37,8 @@ class VisiteController extends Controller
         if (!session()->has('admin_id')) {
             return redirect(route('admins.login')); 
         }
-        return view('admins.visites.create',[
-            'clients'=>Client::all()],
-            ['appartements'=>Appartement::all()
-        ]);
+        $visites=DB::table('visites')->join('clients','visites.clientid','clients.id')->join('appartements','visites.appartementid','appartements.id')->select('clients.nom','clients.prenom1','clients.prenom2','appartements.numappart','appartements.nbrechambre','visites.*')->get();
+        return view('admins.visites.create', compact('visites'));
     }
 
     /**

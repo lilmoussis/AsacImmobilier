@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Appartement;
 use App\Models\Immeuble;
+use Illuminate\Support\Facades\DB;
 
 class AppartementController extends Controller
 {
@@ -19,9 +20,9 @@ class AppartementController extends Controller
         if (!session()->has('admin_id')) {
             return redirect(route('admins.login')); 
         }
-        return view('admins.appartements.index', [
-            'appartements' => Appartement::orderByDesc('id')->get()
-        ]);
+        $appartements=DB::table('appartements')->join('immeubles','appartements.immeubleid','immeubles.id')->select('immeubles.nom','immeubles.adresse','appartements.*');
+        return view('admins.appartements.index', compact('appartements')
+        );
     }
 
     /**
@@ -47,7 +48,7 @@ class AppartementController extends Controller
      */
     public function store(Request $request)
     {
-        if (count(Appartement::where('numappart',$request->numappart)->get())!=0) return back()->with('succes','CNI existe déjà !!!!') ;
+        if (count(Appartement::where('numappart',$request->numappart)->get())!=0) return back()->with('succes','Cet appartement existe déjà !!!!') ;
         $appartement = new Appartement();
         $appartement->userid = session()->get('admin_id');
         $appartement->immeubleid = $request->immeubleid;

@@ -40,7 +40,7 @@
                     <td>
                         <div class="d-flex">
                             <a href="{{route('admins.directeurs.edit', $directeur->id)}}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
-                            <a href="{{route('admins.directeurs.edit', $directeur->id)}}"  onclick="return confirm('Sur de supprimer')" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                            <a href="{{route('admins.directeurs.destroy', $directeur->id)}}"  onclick="return confirm('Sur de supprimer')" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
                         </div>
                     </td>
                 </tr>

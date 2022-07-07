@@ -34,5 +34,7 @@
 	<script src="js/deznav-init.js"></script>
     <script src="{{URL::asset('assets/js/demo.js')}}"></script>
     <script src="{{URL::asset('assets/js/styleSwitcher.js')}}"></script>
+    <script src="{{URL::asset('assets/js/jquery.js')}}"></script>
+    @yield('js')
 </body>
 </html>

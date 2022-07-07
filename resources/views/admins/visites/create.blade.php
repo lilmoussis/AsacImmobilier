@@ -11,13 +11,13 @@
     <form action="{{route('admins.visites.store')}}" method="post">
         @csrf
         <select class="form-control w-50" name="clientid" >
-            @foreach ($clients as $client)
-                <option value="{{$client->id}}">{{$client->nom . " " . $client->prenom1 . " " . $client->prenom2}}</option>
+            @foreach ($visites as $visite)
+                <option value="{{$visite->id}}">{{$visite->nom . " " . $visite->prenom1 . " " . $visite->prenom2}}</option>
             @endforeach
         </select><br>
         <select class="form-control w-50" name="appartementid" >
-            @foreach ($appartements as $appartement)
-                <option value="{{$appartement->id}}">{{$appartement->numappart}}</option>
+            @foreach ($visites as $visite)
+                <option value="{{$visite->id}}">{{$visite->numappart}}</option>
             @endforeach
         </select><br>
         <input style="width: 50%; border-color: rgb(224, 152, 17) "  class="form-control" type="text" name="remarque" placeholder="remarque" required><br>

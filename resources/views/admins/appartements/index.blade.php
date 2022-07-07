@@ -31,10 +31,7 @@
          <tbody  class="align-items-center">
             @foreach($appartements as $appartement)
                 <tr>
-                    @php
-                        $immeuble=App\Models\Immeuble::find($appartement->immeubleid)
-                    @endphp
-                    <td>{{$immeuble->nom}}</td>
+                    <td>{{$appartement->nom}}</td>
                     <td>{{$appartement->numappart}} </td>
                     <td>{{$appartement->superficie}}</td>
                     <td>{{$appartement->numetage}}</td>

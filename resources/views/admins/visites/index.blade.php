@@ -18,7 +18,6 @@
                 <table class="table table-responsive-md">
         <thead>
             <tr>
-                <th>Date_Heure</th>
                 <th>Client</th>
                 <th>Appartemnt</th>
                 <th>Remarque</th>
@@ -29,15 +28,8 @@
          <tbody  class="align-items-center">
             @foreach($visites as $visite)
                 <tr>
-                    <td>{{$visite->created_at}}</td>
-                    @php
-                        $client=App\Models\Client::find($visite->clientid)
-                    @endphp
-                    <td>{{$client->nom . " " . $client->prenom1 . " " . $client->prenom2}}</td>
-                    @php
-                        $appartement=App\Models\Appartement::find($visite->appartementid)
-                    @endphp
-                    <td>{{$appartement->numappart}}</td>
+                    <td>{{$visite->nom . " " . $visite->prenom1 . " " . $visite->prenom2}}</td>
+                    <td>{{$visite->numappart}}</td>
                     <td>{{$visite->remarque}} </td>
                     <td>{{$visite->decision}}</td>
                     <td>
